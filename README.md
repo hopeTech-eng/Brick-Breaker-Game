@@ -1,14 +1,12 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="Brick Breaker banner" width="100%"/>
-
 <br/>
 
 ![Java](https://img.shields.io/badge/Java-21-orange?logo=openjdk&logoColor=white)
 ![Swing](https://img.shields.io/badge/UI-Swing-4F9CFF)
 ![Platform](https://img.shields.io/badge/Platform-NetBeans-1B6AC6?logo=apache-netbeans-ide&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Playable-7ee36b)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
 
 A classic Breakout-style arcade game built in Java using Swing.
 Bounce the ball off your paddle, smash every brick, don't let it fall past you.
