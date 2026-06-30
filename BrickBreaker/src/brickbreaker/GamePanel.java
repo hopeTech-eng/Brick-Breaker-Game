@@ -20,14 +20,14 @@ import javax.swing.Timer;
  * @author HOPEWELL
  */
 public class GamePanel extends JPanel implements ActionListener {
-    static final int SCREEN_WIDTH = 500;
+    static final int SCREEN_WIDTH = 800;
     static final int SCREEN_HEIGHT = 700;
     static final int DELAY = 8;
     
-    static final int ROWS = 5;
+    static final int ROWS = 8;
     static final int COLS = 7;
-    static final int BRICK_WIDTH = 60;
-    static final int BRICK_HEIGHT = 25;
+    static final int BRICK_WIDTH = 90;
+    static final int BRICK_HEIGHT = 15;
     static final int BRICK_GAP = 5;
     static final int BRICK_TOP_OFFSET = 60;
     
@@ -40,6 +40,7 @@ public class GamePanel extends JPanel implements ActionListener {
     boolean rightPressed = false;
     boolean gameOver = false;
     boolean gameWon = false;
+    boolean started = false;
     int score = 0;
     int lives = 3;
     
@@ -73,6 +74,7 @@ public class GamePanel extends JPanel implements ActionListener {
         lives = 3;
         gameOver = false;
         gameWon = false;
+        started = false;
     }
     
     private void createBricks(){
@@ -125,7 +127,7 @@ public class GamePanel extends JPanel implements ActionListener {
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (!gameOver && !gameWon) {
+        if (started && !gameOver && !gameWon) {
             move();
             checkCollisions();
         }
@@ -209,6 +211,9 @@ public class GamePanel extends JPanel implements ActionListener {
         }
         if (key == KeyEvent.VK_R) {
             initGame();
+        }
+        if (key == KeyEvent.VK_SPACE && !started) {
+            started = true;
         }
     }
     
