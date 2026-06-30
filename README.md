@@ -15,14 +15,6 @@ Bounce the ball off your paddle, smash every brick, don't let it fall past you.
 
 ---
 
-<div align="center">
-  <img src="assets/gameplay-preview.svg" alt="Gameplay preview" width="320"/>
-  <br/>
-  <sub><i>Layout shown matches the real brick grid, paddle, and HUD positions in <code>GamePanel.java</code></i></sub>
-</div>
-
----
-
 ## 🚀 How to Run
 
 ### NetBeans
